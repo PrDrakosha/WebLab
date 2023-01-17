@@ -1,5 +1,5 @@
 localStorage.setItem('history', 'test');
-const thirdQ = querySelector('#thirdq');
+const thirdQ = document.querySelector('#thirdq');
 
 function validateField(thirdQ)
 {
