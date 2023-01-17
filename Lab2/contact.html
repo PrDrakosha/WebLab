@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<HTML lang="ru">
+	<HEAD>
+		<meta charset="utf-8">
+		<TITLE> Персональный сайт Петровой Арины. Контакт </TITLE>
+	</HEAD>
+	<body style="background-color:#465449;">
+		<form id="contact" method="post" action="mailto:drakoshakaramelka@yandex.ru" style="background-color:#cae0cf;">
+			<header><h1>Отправить мне письмо</h1></header>
+			<div>
+				<input type="text" id="fio" name="fio" placeholder="Укажите ФИО" required>
+			<p>Укажите пол:
+			<input type="radio" id="sex" name="sex" value="Male">
+			<label for="sex">Мужской</label>
+			<input type="radio" id="sex" name="sex" value="Female">
+			<label for="sex">Женский</label></p>
+			<label for="age">Укажите возраст</label>
+			<select name="age" id="age">
+				<option>13-18</option>
+				<option>19-25</option>
+				<option>26-35</option>
+				<option>36-45</option>
+				<option>46-55</option>
+				<option>56-65</option>
+				<option>66+</option>
+			</select>
+			</div>
+			<div>
+				<input type="text" name="email" id="email" placeholder="Укажите e-mail" required>
+			</div>
+			<div>
+				<input type="text" name="phone" id="phone" placeholder="Укажите номер телефона" required>
+			</div>
+			<div>
+				<textarea id="message" name="message" rows="12" cols="35" placeholder="Введите текст"></textarea>
+				<button type="submit" id="submit">Отправить</button>
+				<input type="reset" value="Очистить">
+			</div>
+			<script type="text/javascript" src="Cont.js"></script>
+		</form>
+	</body>
+</HTML>

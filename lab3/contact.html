@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<HTML lang="ru">
+
+<HEAD>
+	<meta charset="utf-8">
+	<TITLE> Персональный сайт Петровой Арины. Контакт </TITLE>
+	<link rel="stylesheet" href="calendarStyle.css">
+	<link rel="stylesheet" href="contStyle.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"></HEAD>
+
+<body>
+	<input hidden id="historyInput" value="contact">
+	<form id="contact" method="post" action="mailto:drakoshakaramelka@yandex.ru">
+		<header>
+			<h1>Отправить мне письмо</h1>
+		</header>
+		<div class='errorInp' hidden>Пожалуйсте, заполните пустые поля.</div>
+		<div>
+			Имя: <input type="text" class = 'input-fio' id="fio" name="fio" placeholder="Укажите ФИО" required>
+			<p class='errors' id="errorFio1" hidden>В поле присутствуют лишние символы</p>
+			<p class='errors' id="errorFio2" hidden>ФИО введенo некорректно</p>
+			<div>Дата Рождения: <input class = 'input-birthdate' name="birthDate" id="birthDate">
+				<p class='errors' id="errorDate" hidden>Неверный формат даты (мм/дд/гггг)</p>
+				<table id="calendar" hidden>
+					<thead>
+						<tr>
+							<td colspan="4">
+								<select id="month">
+									<option value="0">January</option>
+									<option value="1">February</option>
+									<option value="2">March</option>
+									<option value="3">April</option>
+									<option value="4">May</option>
+									<option value="5">June</option>
+									<option value="6">July</option>
+									<option value="7">August</option>
+									<option value="8">September</option>
+									<option value="9">October</option>
+									<option value="10">November</option>
+									<option value="11">December</option>
+								</select>
+							<td colspan="3">
+								<select id="year">
+									<option value="1989">1989</option>
+									<option value="1990">1990</option>
+									<option value="1991">1991</option>
+									<option value="1992">1992</option>
+									<option value="1993">1993</option>
+									<option value="1994">1994</option>
+									<option value="1997">1997</option>
+									<option value="1998">1998</option>
+									<option value="1999">1999</option>
+									<option value="2000">2000</option>
+									<option value="2001">2001</option>
+									<option value="2002">2002</option>
+									<option value="2003">2003</option>
+									<option value="2004">2004</option>
+									<option value="2005">2005</option>
+									<option value="2006">2006</option>
+									<option value="2007">2007</option>
+									<option value="2008">2008</option>
+									<option value="2009">2009</option>
+									<option value="2010">2010</option>
+									<option value="2011">2011</option>
+									<option value="2012">2012</option>
+									<option value="2013">2013</option>
+									<option value="2014">2014</option>
+									<option value="2015">2015</option>
+									<option value="2016">2016</option>
+									<option value="2017">2017</option>
+									<option value="2018">2018</option>
+									<option value="2019">2019</option>
+									<option value="2020">2020</option>
+									<option value="2021">2021</option>
+									<option value="2022">2022</option>
+									<option value="2023">2023</option>
+								</select>
+						<tr>
+							<td>Mon
+							<td>Tue
+							<td>Wed
+							<td>Thu
+							<td>Fri
+							<td>Sat
+							<td>Sun
+					<tbody>
+				</table>
+			</div>
+			<p>Укажите пол:
+				<input type="radio" id="male" name="sex" value="Male">
+				<label for="sex">Мужской</label>
+				<input type="radio" id="female" name="sex" value="Female">
+				<label for="sex">Женский</label>
+			</p>
+			<p class="errors" id="errorSex" hidden>Выберите пол</p>
+			<!-- <label for="age">Укажите возраст</label>
+			<select name="age" id="age">
+				<option disabled selected value></option>
+				<option>13-18</option>
+				<option>19-25</option>
+				<option>26-35</option>
+				<option>36-45</option>
+				<option>46-55</option>
+				<option>56-65</option>
+				<option>66+</option>
+			</select> -->
+		</div>
+		<div>
+			<input type="text" class = 'input-email' name="email" id="email" placeholder="Укажите e-mail" required>
+			<p class='errors' id="errorEmail" hidden>В поле присутствуют лишние символы</p>
+		</div>
+		<div>
+			<input type="text" class = 'input-phone' name="phone" id="phone" placeholder="Укажите номер телефона" required>
+			<p class='errors' id="errorPhone1" hidden>В поле присутствуют лишние символы</p>
+			<p class='errors' id="errorPhone2" hidden>Номер телефона должен начинаться с +7 или +3</p>
+			<p class='errors' id="errorPhone3" hidden>Номер телефона не должен содержать пробелы</p>
+			<p  class='errors'id="errorPhone4" hidden>Длинна номера телефона должна быть от 9 до 11 цифр</p>
+		</div>
+		<div>
+			<textarea id="message" name="message" rows="12" cols="35" placeholder="Введите текст"></textarea>
+			<button type="submit" id="submit" disabled>Отправить</button>
+			<input type="reset" value="Очистить">
+		</div>
+		<script type="text/javascript" src="Cont2.js"></script>
+		<script type="text/javascript" src="Calendar.js"></script>
+		<script type="text/javascript" src="historyWriter.js"></script>
+	</form>
+</body>
+
+</HTML>

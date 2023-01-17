@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+
+body {
+    background-color: #465449;
+    font-family: 'Comfortaa', cursive;
+}
+
+form {
+    background-color:#cae0cf;
+}
+
+input.invalid {
+    border-color: red;
+}
+
+input.correct {
+    border-color: green;
+    background-color: rgb(205, 255, 205);
+}
+
+div.errorInp {
+    inline-size: 20%;
+    background-color: rgb(207, 161, 176);
+    font-size: large;
+    color: red;
+    font-weight: bold;
+}
+
+p.errors {
+    color: red;
+    font-size: small;
+}
