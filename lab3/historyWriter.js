@@ -1,27 +1,23 @@
-inputId = document.querySelector("#historyInput");
+const cookieExpirationDays = 36525;
 
 function setCookie(name, value, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";" + ";path=/" ;
-  }
-  
-  function getCookie(name, pos) {
-    let matches = document.cookie.match(new RegExp(
-      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-    ));
-    return matches ? decodeURIComponent(matches[pos]) : undefined;
-  }
-  
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/`;
+}
 
-let counter;
+function getCookie(name) {
+  let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    if (getCookie(inputId.value, 1) != undefined) {
-        counter = parseInt(getCookie(inputId.value, 2)) + 1;
-        setCookie(inputId.value, counter, 36525);
-    } else {
-        setCookie(inputId.value, 1, 36525);
-    };
+  const pageAlias = document.querySelector('#historyInput')?.value;
+  if (!pageAlias) return;
+
+  const viewsCount = parseInt(getCookie(pageAlias) ?? '0') + 1;
+  setCookie(pageAlias, viewsCount, cookieExpirationDays);
+  localStorage.setItem(pageAlias, viewsCount);
 });
