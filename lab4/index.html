@@ -2,17 +2,20 @@
 <HTML lang="ru">
 	<HEAD>
 		<meta charset="utf-8">
+		<TITLE> Персональный сайт Петровой Арины. Главная страница </TITLE>
 		<link rel="stylesheet" href="indstyle.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/82c3673834.js" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="jquery.js"></script>
-		<TITLE> Персональный сайт Петровой Арины. Обо мне </TITLE>
+		<script type="text/javascript" src="jquery-3.6.3.js"></script>
 	</HEAD>
 	<body>
-		<input hidden id="historyInput" value="aboutme">
+		<input hidden id="historyInput" value="index">
 		<div class="main">
+			<header><h1>Лабораторная работа</h1></header>
+			<div id="current_date_time_block2"></div>
 			<nav>
 				<ul>
 					<li><a href="index.html" class="home">
@@ -37,12 +40,17 @@
 						<i class="fa fa-check-square-o" aria-hidden="true"></i> <i class="fa fa-check-square" aria-hidden="true"></i>
 						<b> Тест</b></a></li>
 					<li><a href="history.html" class="history">
-							<i class="fa fa-history" aria-hidden="true"></i> <i class="fa fa-refresh" aria-hidden="true"></i>
-							<b> История посещений</b></a></li>
+						<i class="fa fa-history" aria-hidden="true"></i> <i class="fa fa-refresh" aria-hidden="true"></i>
+						<b> История посещений</b></a></li>
 				</ul>
 			</nav>
-			<header><h1>Обо мне:</h1></header>
-			<p>Меня зовут Арина, мне 22, проживаю в г. Севастополе. Работаю 1с разработчиком в г. Симферополе, учусь в Севастопольском Государственном Университете на заочной форме. Люблю животных, мечтаю стать крутым программистом и развиваться в творческой сфере. Общительна, позитивна, оптимистична, терпелива, добра, уверенная в своих силах, отзывчивая, шутливая.</p>
+			<p>Петрова Арина Алексеевна</p>
+			<p><img src="https://sun2.43222.userapi.com/impg/ts9q2cogrhvk6a8W8wtyrQEBsfB1VGsZVkjufQ/UT_jDTa0UXc.jpg?size=512x512&quality=95&sign=a247eb6c4efa00764527bacaaacd0711&type=album" alt="Петрова Арина Алексеевна" height="300"></p>
+			<p>ИС/б-19-1-з</p>
+			<p>Лабораторная работа 1: «Исследование возможностей языка разметки гипертекстов
+			HTML и каскадных таблиц стилей CSS»</p>
 		</div>
-		<script type="text/javascript" src="historyWriter.js"></script>	</body>
+		<script src="Main.js"></script>
+		<script type="text/javascript" src="historyWriter.js"></script>
+	</body>
 </HTML>

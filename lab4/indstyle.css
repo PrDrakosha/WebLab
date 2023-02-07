@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+
+body {
+    background-color: #465449;
+    font-family: 'Comfortaa', cursive;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  
+  a:link {
+    color: #7e1a51;
+  }
+  
+  a:visited {
+    color: #5e0c1a;
+  }
+  
+  a:focus {
+    border-bottom: 1px solid;
+    background: #e498e0;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;
+    background: #feaaf3;
+  }
+  
+  a:active {
+    background: #530131;
+    color: #feaaf3;
+  }
+
+.main {
+    background-color: #cae0cf;
+}
+
+.list {
+    background-color: #cae0cf;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin-left: 0.6;
+  padding-left: 0.6;
+}
+
+.home:hover .fa-home,
+.home .fa-key {
+    display: none;
+}
+.home:hover .fa-key {
+    display: inline;
+}
+
+.adress:hover .fa-address-card-o,
+.adress .fa-address-card {
+    display: none;
+}
+.adress:hover .fa-address-card {
+    display: inline;
+}
+
+.gamepad:hover .fa-gamepad,
+.gamepad .fa-television {
+    display: none;
+}
+.gamepad:hover .fa-television {
+    display: inline;
+}
+
+.pencil:hover .fa-pencil,
+.pencil .fa-pencil-square-o {
+    display: none;
+}
+.pencil:hover .fa-pencil-square-o {
+    display: inline;
+}
+
+.picture:hover .fa-picture-o,
+.picture .fa-camera-retro {
+    display: none;
+}
+.picture:hover .fa-camera-retro {
+    display: inline;
+}
+
+.envelope:hover .fa-envelope,
+.envelope .fa-envelope-open {
+    display: none;
+}
+.envelope:hover .fa-envelope-open {
+    display: inline;
+}
+
+.check:hover .fa-check-square-o,
+.check .fa-check-square {
+    display: none;
+}
+.check:hover .fa-check-square {
+    display: inline;
+}
+
+.history:hover .fa-history,
+.history .fa-refresh {
+    display: none;
+}
+.history:hover .fa-refresh {
+    display: inline;
+}

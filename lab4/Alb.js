@@ -34,15 +34,15 @@ let titles = [
 	];
 
 const imagesPerRow = 3;
-const tableContainer = document.querySelector('.table-container');
-const table = document.createElement('table');
+const tableContainer = $('.table-container');
+const table = $('#table');
 
-const slider = document.querySelector('.slider'),
+const slider = $('.slider'),
 //sliderContainer = document.querySelector('.slider__container'),
-closeButton = document.querySelector('.slider__close'),
+closeButton = $('.slider__close'),
 //  leftButton = document.querySelector('.slider__btn_left'),
 //  rightButton = document.querySelector('.slider__btn_right'),
-picContainer = document.querySelector('.slider__picture');
+picContainer = $('.slider__picture');
 
 let row,
 photoIndex,
