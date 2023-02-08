@@ -24,7 +24,7 @@ function Calendar(year, month, cday) {
     }
   }
   for (let i = dayWeekLast; i < 7; i++) calendar += '<td>&nbsp;';
-  $('#calendar tbody').html() = calendar;
+  $('#calendar tbody').html(calendar);
   god.selected = true;
   mesyac.selected = true;
   if ($('#calendar tbody tr').length < 6) {
