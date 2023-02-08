@@ -55,7 +55,7 @@ function Calendar(year, month, cday) {
 function initMonthDates() {
   const daysBtns = $('.month-day');
   daysBtns.each(dayBtn => {
-    dayBtn.addEventListener('click', () => {
+    dayBtn.click(function() {
       daysBtns.each(dayBtnToDeselect => {
         dayBtnToDeselect.removeClass('selected');
       });
