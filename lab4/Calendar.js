@@ -24,11 +24,11 @@ function Calendar(year, month, cday) {
     }
   }
   for (let i = dayWeekLast; i < 7; i++) calendar += '<td>&nbsp;';
-  $('#calendar tbody').innerHTML = calendar;
+  $('#calendar tbody').html() = calendar;
   god.selected = true;
   mesyac.selected = true;
   if ($('#calendar tbody tr').length < 6) {
-    $('#calendar tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+    $('#calendar tbody').html() += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
   }
 
   const currentDateElement = $(`.month-day[value="${currentDate.getDate()}"]`);
@@ -67,10 +67,10 @@ function initMonthDates() {
 }
 
 function updateCalendar() {
-  Calendar(document.querySelector('#calendar select#year').value,
-    parseFloat(document.querySelector('#calendar select#month').options[document.querySelector('#calendar select').selectedIndex].value),
-    parseInt(document.querySelector('.month-day.selected')?.innerHTML ?? '1'));
+  Calendar($('#calendar select#year').value,
+    parseFloat($('#calendar select#month').options[$('#calendar select').selectedIndex].value),
+    parseInt($('.month-day.selected')?.html() ?? '1'));
 }
 
 Calendar(new Date().getFullYear(), new Date().getMonth());
-document.querySelector('#calendar').onchange = updateCalendar;
+$('#calendar').onchange = updateCalendar;
