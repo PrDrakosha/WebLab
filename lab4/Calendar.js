@@ -6,8 +6,8 @@ function Calendar(year, month, cday) {
   dayWeekLast = dateLast.getDay(),
   dayWeekFirst = new Date(dateLast.getFullYear(), dateLast.getMonth(), 1).getDay(),
   calendar = '<tr>',
-  mesyac = document.querySelector('#calendar option[value="' + dateLast.getMonth() + '"]'),
-  god = document.querySelector('#calendar option[value="' + currentDate.getFullYear() + '"]');
+  mesyac = $('#calendar option[value="' + dateLast.getMonth() + '"]'),
+  god = $('#calendar option[value="' + currentDate.getFullYear() + '"]');
   if (dayWeekFirst != 0) {
     for (let i = 1; i < dayWeekFirst; i++) calendar += '<td>';
   } else {
@@ -24,21 +24,21 @@ function Calendar(year, month, cday) {
     }
   }
   for (let i = dayWeekLast; i < 7; i++) calendar += '<td>&nbsp;';
-  document.querySelector('#calendar tbody').innerHTML = calendar;
+  $('#calendar tbody').innerHTML = calendar;
   god.selected = true;
   mesyac.selected = true;
-  if (document.querySelectorAll('#calendar tbody tr').length < 6) {
-    document.querySelector('#calendar tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+  if ($('#calendar tbody tr').length < 6) {
+    $('#calendar tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
   }
 
-  const currentDateElement = document.querySelector(`.month-day[value="${currentDate.getDate()}"]`);
+  const currentDateElement = $(`.month-day[value="${currentDate.getDate()}"]`);
   if (currentDateElement) {
-    currentDateElement.classList.add('selected');
+    currentDateElement.addClass('selected');
   }
 
   initMonthDates();
 
-  const dateElement = document.querySelector('#birthDate');
+  const dateElement = $('#birthDate');
   if (dateElement) {
     year = currentDate.toLocaleString("default", { year: "numeric" });
     month = currentDate.toLocaleString("default", { month: "2-digit" });
@@ -52,13 +52,13 @@ function Calendar(year, month, cday) {
 }
 
 function initMonthDates() {
-  const daysBtns = document.querySelectorAll('.month-day');
-  daysBtns.forEach(dayBtn => {
+  const daysBtns = $('.month-day');
+  daysBtns.each(dayBtn => {
     dayBtn.addEventListener('click', () => {
-      daysBtns.forEach(dayBtnToDeselect => {
-        dayBtnToDeselect.classList.remove('selected');
+      daysBtns.each(dayBtnToDeselect => {
+        dayBtnToDeselect.removeClass('selected');
       });
-      dayBtn.classList.add('selected');
+      dayBtn.addClass('selected');
 
       updateCalendar();
     });
