@@ -28,7 +28,8 @@ function Calendar(year, month, cday) {
   god.selected = true;
   mesyac.selected = true;
   if ($('#calendar tbody tr').length < 6) {
-    $('#calendar tbody').html() += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+    const calendarContent = $('#calendar tbody').html() + '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+    $('#calendar tbody').html(calendarContent);
   }
 
   const currentDateElement = $(`.month-day[value="${currentDate.getDate()}"]`);
