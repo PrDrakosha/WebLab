@@ -54,12 +54,12 @@ function Calendar(year, month, cday) {
 
 function initMonthDates() {
   const daysBtns = $('.month-day');
-  daysBtns.each(function(dayBtn) {
-    dayBtn.on('click', function() {
+  daysBtns.each(function() {
+    $(this).on('click', function() {
       $(this).each(function(dayBtnToDeselect) {
-        dayBtnToDeselect.removeClass('selected');
+        $(this).removeClass('selected');
       });
-      dayBtn.addClass('selected');
+      $(this).addClass('selected');
 
       updateCalendar();
     });
