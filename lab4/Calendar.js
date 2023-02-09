@@ -54,9 +54,9 @@ function Calendar(year, month, cday) {
 
 function initMonthDates() {
   const daysBtns = $('.month-day');
-  daysBtns.each(dayBtn => {
-    dayBtn.click(function() {
-      daysBtns.each(dayBtnToDeselect => {
+  daysBtns.each(function(dayBtn) {
+    dayBtn.on('click', function() {
+      $(this).each(function(dayBtnToDeselect) {
         dayBtnToDeselect.removeClass('selected');
       });
       dayBtn.addClass('selected');
@@ -73,5 +73,5 @@ function updateCalendar() {
     parseInt($('.month-day.selected')?.html() ?? '1'));
 }
 
-Calendar(new Date().getFullYear(), new Date().getMonth());
-$('#calendar').onchange = updateCalendar;
+$(Calendar(new Date().getFullYear(), new Date().getMonth()));
+$('#calendar').on("change", updateCalendar);
