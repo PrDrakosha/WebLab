@@ -70,7 +70,7 @@ function initMonthDates() {
 function updateCalendar() {
   yearPar = $('#calendar select#year').val();
   monthPar = parseFloat($('#calendar select#month option:selected').val());
-  dayPar = parseInt($('.month-day option:selected')?.html() ?? '1');
+  dayPar = parseInt($('.month-day selected')?.html() ?? '1');
   Calendar(yearPar, monthPar, dayPar);
 }
 
