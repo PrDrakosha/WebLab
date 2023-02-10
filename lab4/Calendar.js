@@ -68,9 +68,10 @@ function initMonthDates() {
 }
 
 function updateCalendar() {
-  Calendar($('#calendar select#year').value,
-    parseFloat($('#calendar select#month').options[$('#calendar select').selectedIndex].value),
-    parseInt($('.month-day.selected')?.html() ?? '1'));
+  yearPar = $('#calendar select#year').value;
+  monthPar = parseFloat($('#calendar select#month option:selected').val());
+  dayPar = parseInt($('.month-day.selected')?.html() ?? '1');
+  Calendar(yearPar, monthPar, dayPar);
 }
 
 $(Calendar(new Date().getFullYear(), new Date().getMonth()));
